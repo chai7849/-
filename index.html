@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="70대 어르신을 위한 한국어 낱말놀이 인지능력 향상 퀴즈 게임"
+    />
+    <title>기억쑥쑥 낱말놀이</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="game-title">
+        <div>
+          <p class="eyebrow">70대 어르신 맞춤 · 쉬운 한국어 낱말놀이</p>
+          <h1 id="game-title">기억쑥쑥 낱말놀이</h1>
+          <p class="hero-description">
+            낱말의 뜻, 초성, 익숙한 속담을 맞히며 언어 기억력과 집중력을 즐겁게 깨워 보세요.
+            글씨와 버튼을 크게 만들어 혼자서도 편하게 사용할 수 있습니다.
+          </p>
+        </div>
+        <div class="score-card" aria-label="현재 점수">
+          <span>점수</span>
+          <strong id="score">0</strong>
+          <small>/ <span id="total-score">0</span>문제</small>
+        </div>
+      </section>
+
+      <section class="game-card" aria-live="polite">
+        <div class="progress-header">
+          <span id="question-number">1번째 문제</span>
+          <span id="progress-percent">0% 진행</span>
+        </div>
+        <div class="progress-bar" aria-hidden="true">
+          <div id="progress-fill"></div>
+        </div>
+
+        <div class="question-type" id="question-type">낱말 뜻 찾기</div>
+        <h2 id="question-prompt"></h2>
+
+        <div class="action-row">
+          <button class="secondary-button" id="hint-button" type="button">도움말 보기</button>
+          <p id="encouragement">아주 좋아요!</p>
+        </div>
+
+        <div class="hint-box" id="hint-box" hidden></div>
+        <div class="choices" id="choices" role="list" aria-label="정답 선택지"></div>
+        <div class="result-box" id="result-box" hidden></div>
+
+        <div class="footer-actions">
+          <p><span id="answered-count">0</span>문제를 풀었습니다.</p>
+          <button class="primary-button" id="next-button" type="button" hidden>다음 문제로 가기</button>
+        </div>
+      </section>
+
+      <section class="finish-card" id="finish-card" aria-label="최종 결과" hidden>
+        <h2>오늘의 결과</h2>
+        <p id="finish-message"></p>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
